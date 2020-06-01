@@ -5,8 +5,10 @@ import Home from "./pages/Home";
 import LoginUser from "./pages/LoginUser";
 import SignUp from "./pages/SignUp";
 import Preguntas from "./pages/Preguntas";
-import { AuthProvider } from "./components/Auth";
-import PrivateRoute from "./components/PrivateRoute"
+
+
+import AuthProvider  from "./components/Auth";  // React context
+import PrivateRoute from "./components/PrivateRoute" //routes Protegidas
 
 function App() {
   return (

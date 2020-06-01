@@ -1,7 +1,9 @@
 import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import { withRouter, Redirect } from "react-router-dom";
 import app from "../../config/firebase";
 import { AuthContext } from "../../components/Auth";
+
+//img
 import avatar from "../../assets/img/avatar.svg"
 import bg from "../../assets/img/bg.svg"
 import wave from "../../assets/img/wave.png"
@@ -9,6 +11,9 @@ import wave from "../../assets/img/wave.png"
 import "./LoginUser.scss"
 
 const Login = ({ history }) => {
+
+
+  //login en firebase
   const handleLogin = useCallback(
     async event => {
       event.preventDefault();
@@ -25,15 +30,14 @@ const Login = ({ history }) => {
     [history]
   );
 
+
+
+  // utilizando useContext
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
     return <Redirect to="/" />;
   }
-
-
-
-
 
 
   return (
@@ -50,7 +54,6 @@ const Login = ({ history }) => {
         </label>
         <button type="submit">Log in</button>
       </form> */}
-
       
       <img className="wave" src={wave} alt="logo" />
       <div className="container">

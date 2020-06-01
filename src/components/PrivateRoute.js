@@ -8,7 +8,7 @@ import {AuthContext } from "./Auth"
         <Route
             {...rest}
             render={routeProps => 
-            !!currentUser ? (
+            currentUser ? (
                 <RouteComponent {...routeProps} />
             ):(
                 <Redirect to={"login"} />
