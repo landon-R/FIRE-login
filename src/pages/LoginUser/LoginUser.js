@@ -13,16 +13,13 @@ import wave from "../../assets/img/wave.png";
 
 import "./LoginUser.scss";
 
-// const [password, setPassword] = useState("");
 
 //login en firebase
 
 const Login = () => {
  
   const [errox, setErrox] = useState(false)
-
   console.log((errox));
-  
 
   const { register, handleSubmit, errors } = useForm({
     mode: "onBlur",
