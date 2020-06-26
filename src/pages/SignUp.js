@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import app from "../config/firebase";
 
 const SignUp = ({ history }) => {
